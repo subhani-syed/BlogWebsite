@@ -30,7 +30,10 @@ app.get("/compose",(req,res)=>{
 })
 
 app.post("/compose",(req,res)=>{
-    console.log(req.body.here);
+    // document = compose.ejs;
+    var x = document.getElementById("here").value;
+    // console.log(req.body.here);
+    console.log(x);
 })
 
 app.listen(3000,function(){
