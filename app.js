@@ -1,7 +1,8 @@
 const express = require ("express");
 const bodyParser = require("body-parser");
-
+var _ = require("lodash");
 const ejs = require("ejs");
+
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -20,7 +21,6 @@ app.get("/",function(req,res){
         Msg:msg,
         posts:posts
     })
-    // console.log(posts);
 })
 
 app.get("/contact",(req,res)=>{
@@ -36,18 +36,35 @@ app.get("/compose",(req,res)=>{
 })
 
 app.post("/compose",(req,res)=>{
+    
     let post={
         Title : req.body.PostTitle,
         Body : req.body.PostBody
     };
-    
     posts.push(post);
     res.redirect("/");
 })
 
+//Data Endpoint
 app.get("/data",(req,res)=>{
     res.send(posts);
     console.log(posts);
+})
+
+
+app.get("/posts/:topic",(req,res)=>{
+    const storedTitle = _.lowerCase(req.params.topic);
+    posts.forEach(function(post){
+        const title = _.lowerCase(post.Title);
+        if(storedTitle===title){
+            res.render("post",{
+                PostHeading:post.Title,
+                PostBody:post.Body
+            });
+            console.log("Match Found");
+        }
+    })
+    // console.log(req.params.topic);
 })
 
 app.listen(3000,function(){

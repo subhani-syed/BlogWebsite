@@ -2,10 +2,14 @@
 
 <h1>Home</h1>
 <p>This is the msg- <%= Msg%> </p>
+      
+    <%posts.forEach(function(post){%>
+        <h1><%=post.Title%></h1>
+        <p><%=post.Body.substring(0,100)+"..."%>
+            <a href="/posts/<%=post.Title%>">Read More</a>
+        </p>
 
-    for (var i=0;i<posts.length();i++){
-        console.log(posts[i]);
-    }
+    <!-- <%    console.log(post.Title);%> -->
+    <%})%>
 
-<% console.log(posts) %>
 <%- include('partials/footer'); -%>
