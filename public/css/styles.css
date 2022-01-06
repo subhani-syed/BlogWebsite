@@ -1,4 +1,9 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .nav_bar{
+    /* display: flex; */
+    /* align-items: center; */
     background-color: #222831;
     overflow: hidden;
 }

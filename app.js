@@ -11,8 +11,8 @@ app.set('view engine','ejs');
 app.use(express.static("public"));
 
 
-const msg = "lorem ipsum solo fitto";
-const about = "This is thje about page";
+const msg = "You can find all the blogs here: ";
+const about = "This is the about page";
 const conatct = "This is the contact page"
 
 let posts=[]
