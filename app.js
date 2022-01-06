@@ -5,6 +5,7 @@ const ejs = require("ejs");
 
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine','ejs');
 app.use(express.static("public"));
@@ -61,10 +62,9 @@ app.get("/posts/:topic",(req,res)=>{
                 PostHeading:post.Title,
                 PostBody:post.Body
             });
-            console.log("Match Found");
+            // console.log("Match Found");
         }
     })
-    // console.log(req.params.topic);
 })
 
 app.listen(3000,function(){
