@@ -68,6 +68,6 @@ app.get("/posts/:topic",(req,res)=>{
     })
 })
 
-app.listen(PORT,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("App runing at  port 3000");
 });
