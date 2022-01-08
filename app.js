@@ -1,6 +1,6 @@
 const express = require ("express");
 const bodyParser = require("body-parser");
-var _ = require("lodash");
+const _ = require("lodash");
 const ejs = require("ejs");
 
 const app = express();
@@ -69,5 +69,5 @@ app.get("/posts/:topic",(req,res)=>{
 })
 
 app.listen(process.env.PORT||3000,function(){
-    console.log("App runing at  port 3000");
+    console.log("App runing at port 3000");
 });
