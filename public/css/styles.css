@@ -1,11 +1,13 @@
 h1{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* font-size: large; */
 }
 .nav_bar{
-    /* display: flex; */
+    display: flex;
+    justify-content:center;
     /* align-items: center; */
+    /* flex-direction: column; */
+    /* text-align: center; */
     background-color: #222831;
     overflow: hidden;
 }
@@ -42,5 +44,18 @@ body{
     background-color:#00adb5;
 }
 .text{
+    font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.post-head{
+    
+}
+.post-body{
+    text-align: center;
+    /* background-color: #222831; */
+    /* border-radius: 5%; */
 }

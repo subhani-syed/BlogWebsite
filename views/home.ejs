@@ -1,15 +1,14 @@
 <%- include('partials/header'); -%>
 
 <h1>Home</h1>
-<p><%= Msg%> </p>
+<p class="text"><%= Msg%> </p>
       
     <%posts.forEach(function(post){%>
-        <h1><%=post.Title%></h1>
-        <p><%=post.Body.substring(0,100)+"..."%>
+        <h1 class="post-head"><%=post.Title%></h1>
+        <p class="post-body"><%=post.Body.substring(0,100)+"..."%>
             <a href="/posts/<%=post.Title%>">Read More</a>
         </p>
 
-    <!-- <%    console.log(post.Title);%> -->
     <%})%>
 
 <%- include('partials/footer'); -%>

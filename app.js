@@ -63,7 +63,6 @@ app.get("/posts/:topic",(req,res)=>{
                 PostHeading:post.Title,
                 PostBody:post.Body
             });
-            // console.log("Match Found");
         }
     })
 })
