@@ -36,11 +36,13 @@ body{
     background-color: #eeeeee;
 }
 .footer{
-    position: fixed;
+    /* position: sticky; */
+    /* position: fixed; */
     left: 0;
-    bottom: 0;
-    width: 100%;
+    /* bottom: 0;  */
+    width: 100%; 
     text-align: center;
+    position: absolute;
 }
 .compose{
     text-align: center;
