@@ -8,6 +8,7 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .nav_bar{
+    border-radius: 10px;
     display: flex;
     justify-content:center;
     background-color: #222831;
@@ -21,9 +22,9 @@ h1{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    /* font-size: large; */
 }
 .nav_bar a:hover{
+    border-radius: 10px;
     background-color: #00adb5;
     color: #eeeeee;
 }
@@ -44,6 +45,7 @@ body{
 .compose{
     text-align: center;
     background-color:#00adb5;
+    border-radius: 10px;
 }
 .text{
     font-size: large;
@@ -54,9 +56,11 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .post-head{
-    
+    border-radius: 10px;
+    background-color: #00adb5;    
 }
 .post-body{
+    border-radius: 10px;
     text-align: center;
 }
 .express_logo{
