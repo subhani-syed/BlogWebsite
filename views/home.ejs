@@ -1,7 +1,8 @@
 <%- include('partials/header'); -%>
-
-<h1>Home</h1>
-<p class="text"><%= Msg%> </p>
+<main>
+    
+    <h1>Home</h1>
+    <p class="text"><%= Msg%> </p>
       
     <%posts.forEach(function(post){%>
         <h1 class="post-head"><%=post.Title%></h1>
@@ -10,5 +11,7 @@
         </p>
 
     <%})%>
+    
+</main>
 
 <%- include('partials/footer'); -%>
