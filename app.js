@@ -48,10 +48,10 @@ app.post("/compose",(req,res)=>{
 })
 
 //Data Endpoint
-app.get("/data",(req,res)=>{
-    res.send(posts);
-    console.log(posts);
-})
+// app.get("/data",(req,res)=>{
+//     res.send(posts);
+//     console.log(posts);
+// })
 
 
 app.get("/posts/:topic",(req,res)=>{
