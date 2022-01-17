@@ -2,7 +2,7 @@ const express = require ("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash");
 const ejs = require("ejs");
-const alert = require("alert");
+
 
 const app = express();
 const PORT = process.env.PORT || 3000
@@ -39,25 +39,13 @@ app.get("/compose",(req,res)=>{
 })
 
 app.post("/compose",(req,res)=>{
+
     let post={
         Title : req.body.PostTitle,
         Body : req.body.PostBody
     };
-
-    if(post.Title==""){
-        if(post.Body==""){
-            alert("You need to give some content!!");
-            res.redirect("/compose");    
-        }else{
-            alert("Title is Missing!!");
-            // Fix This..
-            res.redirect("/compose");
-        }
-    }else{
-        posts.push(post);
-        res.redirect("/");
-    }
-    
+    posts.push(post);
+    res.redirect("/");
 })
 
 //Data Endpoint
